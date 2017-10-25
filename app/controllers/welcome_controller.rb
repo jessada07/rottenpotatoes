@@ -2,7 +2,8 @@ class WelcomeController < ApplicationController::Base
   def index
   	#fernja
   end
-  def peejalove
+
+  def fernjalove
   	#peeja
   	#fern
   end
