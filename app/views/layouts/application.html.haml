@@ -1,15 +1,46 @@
 !!! 5
 %html
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+  %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+  %link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", :rel => "stylesheet"}/
+  %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css", :rel => "stylesheet"}/
+  %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+  %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+  
   %head
+    %link{:href => "assets/logo.png", :rel => "icon"}
     %title RottenPotatoes!
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
- 
+    
   %body
+    - unless current_page?(welcome_index_path) or current_page?(signup_path)
+      %nav.navbar.navbar-custom
+        .container-fluid
+          .navbar-header
+          %ul.nav.navbar-right
+            - if (current_user)
+              %p.welcome.down
+                Welcome
+                &nbsp;
+                #{current_user.name}!
+                &nbsp;
+                = image_tag "#{current_user.image}", class:"image-cropper"
+                &nbsp;
+                = link_to logout_path , :class => 'yellow' do
+                  %span.glyphicon.glyphicon-log-out
+                  Log Out
+            - else
+              %p.moredown
+                = link_to welcome_index_path, :class => "yellow" do
+                  %span.glyphicon.glyphicon-user
+                  Log In
+      %h1.banner
+        = link_to 'RottenPotatoes', movie_index_path, class:"red"
+        
     - if flash[:notice]
-      #notice.message= flash[:notice]
+      %div.alert.alert-success.alert-dismissable.message= flash[:notice]
     - elsif flash[:warning]
-#warning.message= flash[:warning]
-= yield
-	  
+      %div.alert.alert-danger.alert-dismissable.message= flash[:warning]
+    = yield

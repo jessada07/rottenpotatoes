@@ -1,0 +1,20 @@
+%html
+  %head
+  %body
+    %form#login-form{:action => "/signup",:method => :post}
+      .head Sign Up <br> RottenPotatoes
+      .input-field
+        = label :session, :name, 'Name'
+        = text_field :session, :name ,:class => ".input-field",:required => ""
+        = label :session, :provider, 'Email'
+        = text_field :session, :provider ,:class => ".input-field",:type => 'email',:required => "email"
+        = label :session, :uid, 'Password'
+        = text_field :session, :uid ,:class => ".input-field",:type => 'password',:required => ""
+        %br
+        %br
+        = button_tag(type: 'submit',class: 'button_tag') do
+          Sign up
+        %p.text-p
+          Already a member?
+          %a{:href => "welcome"} Login
+

@@ -1,18 +1,29 @@
 -#  This file is app/views/movies/index.html.haml
-%h1 All Movies
+%h1.title.verdana
+  All Movies
+  -if current_user
+    = link_to new_movie_path, :class => "btn btn-success add pull-right" do
+      %span.glyphicon.glyphicon-plus
+      Add Movie
 
-%table#movies
-  %thead
-    %tr
-      %th Movie Title
-      %th Rating
-      %th Release Date
-      %th More Info
-  %tbody
-    - @movies.each do |movie|
+%section
+  %br
+  %br
+  %table.table.table-fixed.table-bordered
+    %thead
       %tr
-        %td= movie.title
-        %td= movie.rating
-        %td= movie.release_date
-        %td= link_to "More about #{movie.title}", movie_path(movie) 
-= link_to 'Add new movie', new_movie_path
+        %th.col-xs-1 Index
+        %th.col-xs-3 Movie Title
+        %th.col-xs-1 Rating
+        %th.col-xs-3 Release Date
+        %th.col-xs-4 More Info
+    %tbody
+      - @movies.sort_by {|m| m.title.downcase}.each_with_index do |movie, index| index = index + 1
+        %tr
+          %td.col-xs-1= index
+          %td.col-xs-3= movie.title
+          %td.col-xs-1= movie.rating
+          %td.col-xs-3= movie.release_date
+          %td.col-xs-4= link_to "More about #{movie.title}", movie_path(movie)
+        
+        

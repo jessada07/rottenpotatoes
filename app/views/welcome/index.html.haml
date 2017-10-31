@@ -1,0 +1,28 @@
+%html
+  %head
+  %body
+    %form#login-form{:action => "/logindata",:method => :post}
+      .head Login <br> RottenPotatoes
+      .social
+        %h4 Connect with
+        %ul
+          %li
+            %a.facebook{:href => "auth/facebook"}
+              %span.fa.fa-facebook
+          %li
+            %a.twitter{:href => "auth/twitter"}
+              %span.fa.fa-twitter
+      .divider
+        %span or
+      .input-field
+        = label :session, :provider, 'Email'
+        = text_field :session, :provider ,:class => ".input-field",:required => "email"
+        = label :session, :uid, 'Password'
+        = text_field :session, :uid ,:class => ".input-field",:type => 'password',:required => ""
+        %br
+        %br
+        = button_tag(type: 'submit',class: 'button_tag') do
+          Login
+        %p.text-p
+          Don't have an account?
+          %a{:href => "signup"} Sign up

@@ -1,0 +1,460 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+  margin: 0 0 0;
+  padding: 0;
+  color: DarkSlateGrey;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10pt;
+}
+
+body{
+  background-image: url('/assets/bg5.jpg');
+}
+
+div#main {
+  margin: 0;
+  padding: 0 20px 20px;
+}
+
+a{
+  background: transparent;
+  color: maroon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.red{
+  color: red;
+  text-shadow: 
+        -2px -2px 0px #000,
+         0px -2px 0px #000,
+         2px -2px 0px #000,
+        -2px  0px 0px #000,
+         2px  0px 0px #000,
+        -2px  2px 0px #000,
+         0px  2px 0px #000,
+         2px  2px 0px #000;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.yellow{
+  color: #FFFF66;
+}
+
+.verdana{
+  font-family: "Verdana";
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.image-cropper {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+h1 {
+  text-decoration: none;
+  padding: 0;
+  color: maroon;
+  font-size: 150%;
+  font-style: italic;
+  display: block;
+  width: 100%;
+}
+
+h1.title {
+  margin: 0 0 0;
+  padding: 10px 0 10px 0;
+  background-color: orange;
+  color: white;
+  border-bottom: 4px solid gold;
+  font-size: 2em;
+  font-style: normal;
+}
+
+.banner{
+  background: url('https://blog.oxforddictionaries.com/wp-content/uploads/potato.jpg');
+  background-size:cover;
+  margin: 0 0 0 0;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-family:"Alfa Slab One";
+  color: #FF0000;
+  font-size: 6em;
+  text-align: center;
+}
+  
+section{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.form{
+  background-color:white;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.table_form{
+  background-color:white;
+}
+
+.table-fixed{
+  width: 100%;
+  background-color: #f3f3f3;
+  tbody{
+    max-height:220px;
+    overflow-y:auto;
+    width: 100%;
+  }
+  thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+        background-color: #f39c12;
+        border:0;
+      }
+    }
+  }
+}
+
+.alert {
+  margin-bottom: 1px;
+  height: 30px;
+  line-height:30px;
+  padding: 0px 15px;
+}
+
+.close{
+  margin-right: 10px;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.box{
+  width: 265px;
+  float: left;
+  margin-right: 25px;
+}
+
+.welcome{
+  padding:0;
+  margin: 0;
+  margin-right: 5px;
+  color:#FFE954;
+  font-weight: bold;
+  font-family: "Tahoma";
+}
+
+.navbar-custom {
+    background-color: #2E2C29;
+    color:#FFE954;
+    border-radius:0;
+    margin:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#FFE954;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #FFE954;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #33aa33;
+    color: #ffffff;
+}
+
+.navbar-custom .navbar-brand {
+    color: #E99D04;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#33aa33;
+}
+.navbar-inverse{
+  margin:0;
+  border-radius:0;
+}
+
+.down{
+  margin-top: 5px;
+}
+
+.moredown{
+  margin-top: 13px;
+}
+
+.title {
+  display: block;
+  padding: 14px 0 15px 0;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+ul {
+  color: #666;
+  list-style:square;
+  padding: 0;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: maroon;
+}
+
+flash{
+  color: red;
+  text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  margin-bottom:10px;
+}
+
+.add{
+  margin-right:50px;
+}
+
+.btn-space {
+  margin-right: 5px;
+}
+
+form#login-form {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #000;
+  margin: 30px auto;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.head {
+  color: #666;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.social {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 82%;
+}
+
+.social h4 {
+  color: #666;
+  font-weight: normal;
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.social ul{
+  display: block;
+}
+
+.social ul li{
+  list-style: none;
+  float: left;
+  width: 42%;
+  margin: 0 3% 0 3%;
+}
+
+.social ul li a{
+  display: inline-block;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px;
+  display: block;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.social ul li a:hover{opacity: .8;}
+.social ul li a.facebook{
+   background: #3a589a;
+}
+
+.social ul li a.twitter {
+  background: #4099ff;
+}
+
+.social ul li a.google-plus {
+  background: #e9544f;
+}
+
+.divider{
+  background: #ddd;
+  height: 2px;
+  display: block;
+  position: relative;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.divider span{
+  width: 30px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: -12px;
+  text-align: center;
+  color: #999;
+}
+
+.input-field {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.input_title input[type="text"]{
+  width: 220px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(223, 223, 223, 0.2);
+  margin: 0;
+  padding: 12px;
+  transition: all 0.15s ease-in-out 0s;
+  outline: none;
+  border: 1px solid #bdbdbd;
+}
+.input_title textarea{
+  width: 670px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(223, 223, 223, 0.2);
+  margin: 0;
+  padding: 12px;
+  transition: all 0.15s ease-in-out 0s;
+  outline: none;
+  border: 1px solid #bdbdbd;
+}
+.show_text{
+  overflow-y:auto;
+  height:100px;
+  max-width:500px;
+  margin-bottom:20px;
+}
+.input-field label {
+  color: #888;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.input-field input[type="email"], .input-field input[type="password"], .input-field input[type="text"] {
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(223, 223, 223, 0.2);
+  margin: 6px 0;
+  padding: 12px;
+  transition: all 0.15s ease-in-out 0s;
+  width: 100%;
+}
+
+.input-field input[type="email"]:focus, .input-field input[type="password"]:focus,.input-field input[type="text"]:focus  {
+  outline: none;
+  border: 1px solid #bdbdbd;
+}
+
+.input-field .button_tag {
+  background: #f85f64;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 5px 0;
+  outline: medium none;
+  overflow: hidden;
+  padding: 14px;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out 0s;
+  width: 100%;
+}
+
+.input-field .button_tag:hover {
+  background: #fe7175;
+}
+
+.text-p{
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.text-p a{
+  color: #175690;
+}
+
+@media (max-width: 480px){
+  form#login-form {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+.col-3 {
+  float: left;
+  //padding: 0 20px;
+  width: 30%;
+}
+.col-5{
+  float: left;
+  padding: 0 20px;
+  
+  width: 70%;  
+}
+
